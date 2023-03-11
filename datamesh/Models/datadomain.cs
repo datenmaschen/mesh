@@ -1,6 +1,6 @@
 namespace Models
 {
-public class Datadomai
+public class Datadomain 
 
 {
 public int Id { get; set; }
