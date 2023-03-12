@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s09F2oJ4nprIjym6fP3iEAwHxHgPRCIvu80odx2G88Ntrs2tqkUtBnn8XOaAt2z7O8zhlIaGAKUCumVxsDjJFw==",
+  "dgSpecHash": "M1mAfkjGYgKm1Xp09AIH59siw2RODzfSzsD9EqRVUk4Sjt4bbuB9WEs+ulBWCJ4Yq8UGLnvBy0Yj42MxaeMRnA==",
   "success": true,
-  "projectFilePath": "/workspaces/mesh/datamesh/datamesh.csproj",
+  "projectFilePath": "/workspaces/mesh/datamesh-api/datamesh.csproj",
   "expectedPackageFiles": [
     "/home/vscode/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",

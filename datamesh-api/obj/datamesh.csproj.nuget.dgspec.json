@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/mesh/datamesh/datamesh.csproj": {}
+    "/workspaces/mesh/datamesh-api/datamesh.csproj": {}
   },
   "projects": {
-    "/workspaces/mesh/datamesh/datamesh.csproj": {
+    "/workspaces/mesh/datamesh-api/datamesh.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/mesh/datamesh/datamesh.csproj",
+        "projectUniqueName": "/workspaces/mesh/datamesh-api/datamesh.csproj",
         "projectName": "datamesh",
-        "projectPath": "/workspaces/mesh/datamesh/datamesh.csproj",
+        "projectPath": "/workspaces/mesh/datamesh-api/datamesh.csproj",
         "packagesPath": "/home/vscode/.nuget/packages/",
-        "outputPath": "/workspaces/mesh/datamesh/obj/",
+        "outputPath": "/workspaces/mesh/datamesh-api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vscode/.nuget/NuGet/NuGet.Config"
