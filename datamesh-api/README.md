@@ -1,4 +1,10 @@
- # Getting started
+# Getting started
+
+Trust the certificate:
+
+```bash
+dotnet dev-certs https --trust
+```
 
 ## References from Microsoft
 
