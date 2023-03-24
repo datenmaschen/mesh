@@ -23,7 +23,7 @@
 				"mssql.connections": [
 					{
 						"server": "localhost,1433",
-						"database": "",
+						"database": "datamesh",
 						"authenticationType": "SqlLogin",
 						"user": "sa",
 						"password": "P@ssw0rd",
