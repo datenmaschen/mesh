@@ -7,8 +7,7 @@ namespace Datamesh.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //connection string for sqlserver localhost database
-            optionsBuilder.UseSqlServer("Server=localhost;Database=datamesh;User Id=sa;Password=P@ssw0rd;");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=datamesh;User Id=sa;Password=P@ssw0rd;TrustServerCertificate=True;");
         }
 
         public DbSet<DataDomain> DataDomainSet { get; set; }

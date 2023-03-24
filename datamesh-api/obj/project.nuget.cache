@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aTsFyxaRaLlR5oNrHo0xM+clC8DyST74A3SB/kXbf+DkSQT9E+2nDHsjHK6KnUs6ioxwQNDyvVkQgCQd6yk/ww==",
+  "dgSpecHash": "Cv664+KtPCnc/N5MrKuWZzHDAiWA7B399YaLTRF8FphlKfHv78hIgNE3l3a9wGRDwED9UQ9E4r87gOCsYs0WzQ==",
   "success": true,
   "projectFilePath": "/workspaces/mesh/datamesh-api/datamesh.csproj",
   "expectedPackageFiles": [
@@ -16,7 +16,7 @@
     "/home/vscode/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.4/microsoft.entityframeworkcore.analyzers.7.0.4.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.entityframeworkcore.design/7.0.4/microsoft.entityframeworkcore.design.7.0.4.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.4/microsoft.entityframeworkcore.relational.7.0.4.nupkg.sha512",
-    "/home/vscode/.nuget/packages/microsoft.entityframeworkcore.sqlserver/7.0.3/microsoft.entityframeworkcore.sqlserver.7.0.3.nupkg.sha512",
+    "/home/vscode/.nuget/packages/microsoft.entityframeworkcore.sqlserver/7.0.4/microsoft.entityframeworkcore.sqlserver.7.0.4.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
