@@ -6,6 +6,13 @@ Trust the certificate:
 dotnet dev-certs https --trust
 ```
 
+In devcontainer ensure ef installed and in path:
+
+```bash
+ dotnet tool install --global dotnet-ef
+ export PATH="$PATH:/home/vscode/.dotnet/tools"
+```
+
 ## References from Microsoft
 
 - https://learn.microsoft.com/en-us/ef/core/cli/dotnet
