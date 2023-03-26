@@ -10,7 +10,7 @@ namespace Datamesh.Models
             optionsBuilder.UseSqlServer(@"Server=localhost;Database=datamesh;User Id=sa;Password=P@ssw0rd;TrustServerCertificate=True;");
         }
 
-        public DbSet<DataDomain> DataDomainSet { get; set; }
+        public DbSet<DataDomain> DataDomainSet { get; set; } = null!;
     }
 
 }

@@ -29,7 +29,7 @@
 						"password": "P@ssw0rd",
 						"emptyPasswordInput": false,
 						"savePassword": false,
-						"profileName": "mssql-container"
+						"profileName": "mssql-datamesh"
 					}
 				]
 			},
