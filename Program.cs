@@ -1,12 +1,21 @@
-using Datamesh.Models;
+using Datamesh.Data;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<DatameshContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MeshContextSQL")));
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

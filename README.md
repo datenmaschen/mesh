@@ -10,6 +10,7 @@ In devcontainer ensure ef installed and in path:
 
 ```bash
  dotnet tool install --global dotnet-ef
+ dotnet tool install --global dotnet-aspnet-codegenerator
  export PATH="$PATH:/home/vscode/.dotnet/tools"
 ```
 
