@@ -8,9 +8,9 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
+	    	"ghcr.io/devcontainers/features/dotnet:1": {},
 		"ghcr.io/devcontainers/features/node:latest" : {},
-		"ghcr.io/devcontainers/features/terraform:latest" : {
-		},
+		"ghcr.io/devcontainers/features/terraform:latest" : {},
 		"ghcr.io/devcontainers/features/azure-cli:latest" : {}
 	},
 
@@ -39,7 +39,7 @@
 				"ms-dotnettools.csharp",
 				"ms-mssql.mssql",
 				"github.copilot",
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
 			]
 		}
 	},
