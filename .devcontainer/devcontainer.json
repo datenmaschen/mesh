@@ -38,7 +38,8 @@
 			"extensions": [
 				"ms-dotnettools.csharp",
 				"ms-mssql.mssql",
-				"github.copilot"
+				"github.copilot",
+				"streetsidesoftware.code-spell-checker"
 			]
 		}
 	},
