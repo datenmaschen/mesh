@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/datamesh/bin/Debug/net6.0/datamesh.dll",
+            "program": "${workspaceFolder}/datamesh/bin/Debug/net7.0/datamesh.dll",
             "args": [],
             "cwd": "${workspaceFolder}/datamesh",
             "stopAtEntry": false,
