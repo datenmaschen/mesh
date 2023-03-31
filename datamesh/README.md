@@ -12,7 +12,6 @@ In devcontainer ensure ef installed and in path:
  dotnet tool install --global dotnet-ef
  dotnet tool install --global dotnet-aspnet-codegenerator
  dotnet tool install -g Microsoft.dotnet-httprepl
- 
  export PATH="$PATH:/home/vscode/.dotnet/tools"
 ```
 
