@@ -8,6 +8,7 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
+		"ghcr.io/devcontainers/features/dotnet:1" : {},
 	    "ghcr.io/devcontainers/features/node:latest" : {},
 		"ghcr.io/devcontainers/features/terraform:latest" : {},
 		"ghcr.io/devcontainers/features/azure-cli:latest" : {}
@@ -43,10 +44,11 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [5000],
+	"forwardPorts": [5000, 5001, 1433],
 	"portsAttributes": {
-		"5000": {
-			"protocol": "https"
+		"5001": {
+			"protocol": "https",
+			"label": "dotnet"
 		}
 	},
 
