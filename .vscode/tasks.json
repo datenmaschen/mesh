@@ -33,7 +33,9 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/datamesh/datamesh.csproj"
+                "${workspaceFolder}/datamesh/datamesh.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         }
