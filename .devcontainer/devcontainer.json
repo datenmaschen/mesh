@@ -37,6 +37,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-dotnettools.csharp",
+				"formulahendry.dotnet-test-explorer",
+        		"ms-vscode.vscode-node-azure-pack",
 				"ms-mssql.mssql",
 				"github.copilot"
 			]
@@ -44,10 +46,9 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [5001, 1433],
+	"forwardPorts": [5000,5001],
 	"portsAttributes": {
 		"5001": {
-			"protocol": "https",
 			"label": "dotnet"
 		}
 	},
