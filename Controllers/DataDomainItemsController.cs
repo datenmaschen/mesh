@@ -91,7 +91,7 @@ namespace Datamesh.Controllers
         ///     }
         ///
         /// </remarks>
-        /// <param name="Name"></param>
+        /// <param name="dataDomain"></param>
         /// <returns>A newly created DataDomain</returns>
         /// <response code="201">Returns the newly created item</response>
         /// <response code="400">If the item is null</response>  

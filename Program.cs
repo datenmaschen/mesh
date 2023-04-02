@@ -1,4 +1,5 @@
 using Datamesh.Models;
+using System.Reflection;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +28,9 @@ builder.Services.AddSwaggerGen(options =>
             Name = "Use under MIT",
         } 
     });
+    // using System.Reflection;
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 var app = builder.Build();

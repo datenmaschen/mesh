@@ -55,7 +55,10 @@
         "tags": [
           "DataDomainItems"
         ],
+        "summary": "Creates a DataDomain.",
+        "description": "Sample request:\r\n            \r\n    POST api/DataDomainItems\r\n    {\r\n       \"Name\": \"Item1\",\r\n    }",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -94,6 +97,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Returns the newly created item"
+          },
+          "400": {
+            "description": "If the item is null"
           }
         }
       }
