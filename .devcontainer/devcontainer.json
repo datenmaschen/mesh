@@ -49,7 +49,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"portsAttributes": {
 		"5000": {
-			"label": "Hello Remote World",
+			"label": "http (dotnet)",
 			"onAutoForward": "notify"
 		},
 		"5001": {
