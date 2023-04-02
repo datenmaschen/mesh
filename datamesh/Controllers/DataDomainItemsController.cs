@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Datamesh.Data;
 using Datamesh.Models;
 
-namespace datamesh.Controllers
+namespace Datamesh.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
