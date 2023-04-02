@@ -36,9 +36,9 @@
 			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
+				"ms-azuretools.vscode-docker",
 				"ms-dotnettools.csharp",
-				"formulahendry.dotnet-test-explorer",
-        		"ms-vscode.vscode-node-azure-pack",
+				"ms-vscode.vscode-node-azure-pack",
 				"ms-mssql.mssql",
 				"github.copilot",
 				"streetsidesoftware.code-spell-checker"
@@ -47,7 +47,7 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	//"forwardPorts": [5000, 5001],
+	"forwardPorts": [5000],
 	"portsAttributes": {
 		"5000": {
 			"label": "datamesh",
