@@ -40,19 +40,23 @@
 				"formulahendry.dotnet-test-explorer",
         		"ms-vscode.vscode-node-azure-pack",
 				"ms-mssql.mssql",
-				"github.copilot"
+				"github.copilot",
+				"streetsidesoftware.code-spell-checker"
 			]
 		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [5000,5001],
 	"portsAttributes": {
+		"5000": {
+			"label": "Hello Remote World",
+			"onAutoForward": "notify"
+		},
 		"5001": {
-			"label": "dotnet"
+			"protocol": "https"
 		}
 	},
-
+	
 	// postCreateCommand.sh parameters: $1=SA password, $2=dacpac path, $3=sql script(s) path
 	"postCreateCommand": "bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'"
 
