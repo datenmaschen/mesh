@@ -49,7 +49,7 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [5000],
+	"forwardPorts": [5000,1433],
 	"portsAttributes": {
 		"5000": {
 			"label": "datamesh",
@@ -57,11 +57,14 @@
 		},
 		"5001": {
 			"protocol": "https"
+		},
+		"1433" : {
+			"label": "MSSQL2019"
 		}
 	},
 	
 	// postCreateCommand.sh parameters: $1=SA password, $2=dacpac path, $3=sql script(s) path
-	"postCreateCommand": "bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'"
+	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh"
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
