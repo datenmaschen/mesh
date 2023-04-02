@@ -1,10 +1,16 @@
 using Datamesh.Models;
+using Datamesh.Data;
 using System.Reflection;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<DatameshContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MeshContextSQL")));
+    
 // Add services to the container.
 builder.Services.AddControllers();
 //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
