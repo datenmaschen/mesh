@@ -7,9 +7,11 @@
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-    "features": {
-		"ghcr.io/devcontainers/features/dotnet:1": {},
-		"ghcr.io/devcontainers/features/node:latest" : {},
+  "features": {
+		"docker-in-docker": "latest",
+		"github-cli": "latest",
+		"ghcr.io/devcontainers/features/dotnet:1" : {},
+	  "ghcr.io/devcontainers/features/node:latest" : {},
 		"ghcr.io/devcontainers/features/terraform:latest" : {},
 		"ghcr.io/devcontainers/features/azure-cli:latest" : {}
 	},
@@ -36,21 +38,31 @@
 			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
+				"ms-azuretools.vscode-docker",
 				"ms-dotnettools.csharp",
+				"ms-vscode.vscode-node-azure-pack",
 				"ms-mssql.mssql",
-				"github.copilot"
+				"github.copilot",
+				"streetsidesoftware.code-spell-checker"
 			]
 		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [5000, 5001],
-	 "portsAttributes": {
-			"5001": {
-				"protocol": "https"
-			}
-	 },
-
+	"forwardPorts": [5000,1433],
+	"portsAttributes": {
+		"5000": {
+			"label": "datamesh",
+			"onAutoForward": "openBrowser"
+		},
+		"5001": {
+			"protocol": "https"
+		},
+		"1433" : {
+			"label": "MSSQL2019"
+		}
+	},
+	
 	// postCreateCommand.sh parameters: $1=SA password, $2=dacpac path, $3=sql script(s) path
 	"postCreateCommand": "bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'"
 

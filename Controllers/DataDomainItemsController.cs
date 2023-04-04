@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using Datamesh.Data;
 using Datamesh.Models;
 
-namespace datamesh.Controllers
+namespace Datamesh.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -26,6 +28,7 @@ namespace datamesh.Controllers
             return await _context.DataDomainSet.ToListAsync();
         }
 
+        
         // GET: api/DataDomainItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<DataDomain>> GetDataDomain(Guid id)
@@ -75,6 +78,23 @@ namespace datamesh.Controllers
             return NoContent();
         }
 
+        // <snippet_Create>
+        /// <summary>
+        /// Creates a DataDomain.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST api/DataDomainItems
+        ///     {
+        ///        "Name": "Item1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="dataDomain"></param>
+        /// <returns>A newly created DataDomain</returns>
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response>  
         // POST: api/DataDomainItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -87,8 +107,9 @@ namespace datamesh.Controllers
             _context.DataDomainSet.Add(dataDomain);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDataDomain", new { id = dataDomain.Id }, dataDomain);
+            return CreatedAtAction(nameof(GetDataDomain), new { id = dataDomain.Id }, dataDomain);
         }
+        // </snippet_Create>
 
         // DELETE: api/DataDomainItems/5
         [HttpDelete("{id}")]
