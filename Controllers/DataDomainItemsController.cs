@@ -107,7 +107,7 @@ namespace Datamesh.Controllers
             _context.DataDomainSet.Add(dataDomain);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDataDomain", new { id = dataDomain.Id }, dataDomain);
+            return CreatedAtAction(nameof(GetDataDomain), new { id = dataDomain.Id }, dataDomain);
         }
         // </snippet_Create>
 
