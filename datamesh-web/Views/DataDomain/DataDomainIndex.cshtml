@@ -1,0 +1,22 @@
+@model IEnumerable<datamesh_web.Models.DataDomainModel>
+
+<br/>
+<br/>
+<table class="table">
+        <tdead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </tdead>
+            <tbody>
+                @foreach (var item in Model)
+               {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                    </tr>
+               }
+            </tbody>
+    </table>
+</div>

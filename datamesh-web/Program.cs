@@ -1,7 +1,13 @@
+using datamesh_web.Interfaces;
+using datamesh_web.Interfaces.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<IDataDomainService, DataDomainService>(
+    c => c.BaseAddress = new Uri("http://127.0.0.1:60890/")
+);
 
 var app = builder.Build();
 
