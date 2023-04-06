@@ -49,14 +49,18 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [5000,1433],
+	"forwardPorts": [5000,1433,5201],
 	"portsAttributes": {
 		"5000": {
-			"label": "datamesh",
+			"label": "datamesh-api",
 			"onAutoForward": "openBrowser"
 		},
 		"5001": {
 			"protocol": "https"
+		},
+		"5201": {
+			"label": "datamesh-web",
+			"onAutoForward": "openBrowser"
 		},
 		"1433" : {
 			"label": "MSSQL2019"
