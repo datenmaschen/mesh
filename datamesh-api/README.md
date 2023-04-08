@@ -29,3 +29,11 @@ In a new deployed container, you need to update the database.
 ## Reference from Medium
 
 - https://medium.com/@woeterman_94/how-to-generate-a-swagger-json-file-on-build-in-net-core-fa74eec3df1
+
+## Reference Stack Overflow
+
+- https://stackoverflow.com/questions/40696305/how-to-change-the-output-folder-for-migrations-with-asp-net-core
+
+```bash
+dotnet ef migrations add InitialCreate --output-dir Data/Migrations
+```
