@@ -7,4 +7,8 @@
     <RootNamespace>datamesh_web</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Font.Awesome" Version="5.15.4" />
+  </ItemGroup>
+
 </Project>

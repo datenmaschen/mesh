@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YxadCqy4tzGUsWKhhQ2rhULPChT6qx/NTDwwlE7jzo4PvhRW8NX0vacxSUR97yInCxKM3QXKqE2AmELtNdPKtQ==",
+  "dgSpecHash": "XJhm8G/b2Evew4arBBHAJ7ne5yOpBNvKJpvoXYMQHx+CoCp48tJruFrifZjGE1IL3vdFzzZVhsiPrcrhpSrcXQ==",
   "success": true,
   "projectFilePath": "/workspaces/mesh/datamesh-web/datamesh-web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/vscode/.nuget/packages/font.awesome/5.15.4/font.awesome.5.15.4.nupkg.sha512"
+  ],
   "logs": []
 }

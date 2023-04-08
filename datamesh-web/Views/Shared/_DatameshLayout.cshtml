@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - datamesh_web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/fontawesome/css/fontawesome.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/datamesh_web.styles.css" asp-append-version="true" />
 </head>
@@ -21,7 +22,7 @@
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
                         <a class="nav-link text-dark align-middle px-0" asp-area="" asp-controller="Home" asp-action="Index">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            <i class="fa-house-blank"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                         </a>
                     </li>
                     <li>
@@ -93,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="col py-3">
+        <div class="col py-3 bg-green">
             @RenderBody()
         </div>
     </div>
