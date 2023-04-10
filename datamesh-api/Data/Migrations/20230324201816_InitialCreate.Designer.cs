@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace datamesh.Migrations
+namespace datamesh.Data.Migrations
 {
     [DbContext(typeof(DatameshContext))]
     [Migration("20230324201816_InitialCreate")]
