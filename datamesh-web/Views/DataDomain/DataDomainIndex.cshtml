@@ -1,22 +1,25 @@
 @model IEnumerable<datamesh_web.Models.DataDomainModel>
 
-<br/>
-<br/>
+<div class="jumbotron bg-white rounded-5 py-4 px-3">
+    <h1>Contoso University</h1>
+</div>
+
+<div class="row mt-0 py-4">
 <table class="table">
-        <tdead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-            </tr>
-        </tdead>
-            <tbody>
-                @foreach (var item in Model)
-               {
-                    <tr>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                    </tr>
-               }
-            </tbody>
-    </table>
+    <tdead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </tdead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                </tr>
+            }
+        </tbody>
+</table>
 </div>
