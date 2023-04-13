@@ -6,8 +6,14 @@
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
+	"hostRequirements": {
+		"cpus": 4,
+		"memory": "8gb",
+		"storage": "32gb"
+	 },
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
-  "features": {
+  	"features": {
 		"docker-in-docker": "latest",
 		"github-cli": "latest",
 		"ghcr.io/devcontainers/features/dotnet:1" : {},
@@ -63,7 +69,7 @@
 			"onAutoForward": "openBrowser"
 		},
 		"1433" : {
-			"label": "MSSQL2019"
+			"label": "MSSQL2022"
 		}
 	},
 	

@@ -1,25 +1,29 @@
 @model IEnumerable<datamesh_web.Models.DataDomainModel>
 
-<div class="jumbotron bg-white rounded-5 py-4 px-3">
-    <h1>Contoso University</h1>
+<div class="container">
+    <div class="jumbotron bg-white rounded-5 py-4 px-1 my-5">
+        <h1>Datadomain(s)</h1>
+    </div>
 </div>
 
-<div class="row mt-0 py-4">
-<table class="table">
-    <tdead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-        </tr>
-    </tdead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<div class="container">
+    <div class="row px-3 py-4 rounded-5 bg-white">
+        <table class="table table-striped table-hover table-sm">
+            <tdead>
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Name</td>
+                    <th>Id</th>
+                    <th>Name</th>
                 </tr>
-            }
-        </tbody>
-</table>
+            </tdead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                        </tr>
+                    }
+                </tbody>
+        </table>
+    </div>
 </div>
