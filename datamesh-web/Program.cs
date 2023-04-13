@@ -1,7 +1,7 @@
 using datamesh_web.Interfaces;
 using datamesh_web.Interfaces.Services;
 
-internal class Program
+public class Program
 {
     private static void Main(string[] args)
     {

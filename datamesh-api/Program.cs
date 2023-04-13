@@ -4,14 +4,16 @@ using System.Reflection;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-internal class Program
+public class Program
 {
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddDbContext<DatameshContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("MeshContextSQL")));
+        {
+            options.UseSqlServer(builder.Configuration.GetConnectionString("MeshContextSQL"));
+        });
 
         // Add services to the container.
         builder.Services.AddControllers();
@@ -59,7 +61,7 @@ internal class Program
             });
         }
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
 
         app.UseAuthorization();
 
