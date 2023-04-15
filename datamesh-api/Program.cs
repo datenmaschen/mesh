@@ -63,7 +63,7 @@ public class Program
             });
         }
 
-        //app.UseHttpsRedirection();
+        app.UseHttpsRedirection();
 
         app.UseAuthorization();
 
