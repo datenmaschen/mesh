@@ -4,17 +4,19 @@ using System.Reflection;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 public class Program
 {
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Services.AddDbContext<DatameshContext>(options =>
+        builder.Services.AddDbContext<DatameshContext>((provider, options) =>
         {
-            options.UseSqlServer(builder.Configuration.GetConnectionString("MeshContextSQL"));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DatameshConnString"));
+            //options.AddInterceptors(provider.GetRequiredService<AadAuthenticationDbConnectionInterceptor>());
         });
-
+        
         // Add services to the container.
         builder.Services.AddControllers();
         //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
