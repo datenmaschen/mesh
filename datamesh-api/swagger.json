@@ -253,15 +253,49 @@
   "components": {
     "schemas": {
       "DataDomain": {
+        "required": [
+          "devOpsProjectName",
+          "key",
+          "name",
+          "nameAbbrevationLong",
+          "nameAbbreviationShort",
+          "subscriptionId",
+          "subscriptionName"
+        ],
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
             "format": "uuid"
           },
+          "key": {
+            "maxLength": 43,
+            "minLength": 1,
+            "type": "string"
+          },
           "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nameAbbrevationLong": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nameAbbreviationShort": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "subscriptionName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "subscriptionId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
+          },
+          "devOpsProjectName": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

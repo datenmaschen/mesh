@@ -15,6 +15,12 @@ In devcontainer ensure ef installed and in path:
  export PATH="$PATH:/home/vscode/.dotnet/tools"
 ```
 
+To create the latest migration:
+
+```terminal
+dotnet ef migrations add <<YourMigrationName>
+```
+
 In a new deployed container, you need to update the database.
 
 ## References from Microsoft
