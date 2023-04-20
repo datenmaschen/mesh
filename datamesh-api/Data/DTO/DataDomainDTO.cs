@@ -1,5 +1,5 @@
 using System;
-using Datamesh.Models
+using Datamesh.Models;
 
 namespace Datamesh.Data.DTO
 {
