@@ -1,8 +1,9 @@
 using System;
+using Datamesh.Models
 
-namespace Datamesh.Models
+namespace Datamesh.Data.DTO
 {
-    public class DataDomainDTO : IBaseEntity
+    public class DataDomainDTO : DataDomain
 
     {
         public Guid Id { get; set; }
