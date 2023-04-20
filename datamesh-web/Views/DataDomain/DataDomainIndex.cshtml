@@ -1,8 +1,8 @@
 @model IEnumerable<datamesh_web.Models.DataDomainModel>
 
 <div class="container">
-    <div class="jumbotron bg-white rounded-5 py-4 px-1 my-5">
-        <h1>Datadomain(s)</h1>
+    <div class="row px-3 my-4 py-2 rounded-15">
+        <h3>Datadomain(s)</h3>
     </div>
 </div>
 
@@ -25,8 +25,10 @@
                             <td>@item.Name</td>
                             <td>@item.Key</td>
                             <td>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="DataDomain" asp-action="DataDomainIndex"></a>
-                                <a asp-area="" asp-controller="DataDomain" asp-action="DataDomainView" asp-route-id="@item.Id">View</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="DataDomain" asp-action="DataDomainView" asp-route-id="@item.Id">
+                                    <i class="fa fa-eye"></i>
+                                    View
+                                </a>
                             </td>  
                         </tr>
                     }

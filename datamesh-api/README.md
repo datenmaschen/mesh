@@ -15,12 +15,6 @@ In devcontainer ensure ef installed and in path:
  export PATH="$PATH:/home/vscode/.dotnet/tools"
 ```
 
-To create the latest migration:
-
-```terminal
-dotnet ef migrations add <<YourMigrationName>
-```
-
 In a new deployed container, you need to update the database.
 
 ## References from Microsoft
@@ -40,6 +34,24 @@ In a new deployed container, you need to update the database.
 
 - https://stackoverflow.com/questions/40696305/how-to-change-the-output-folder-for-migrations-with-asp-net-core
 
+# Code Snippets
+
+## EF Core 7
+
+To create the latest migration:
+
 ```bash
 dotnet ef migrations add InitialCreate --output-dir Data/Migrations
+```
+
+To apply the latest migration to the database:
+
+```bash
+dotnet ef database update
+```
+
+## Dotnet 7
+
+```bash
+dotnet-aspnet-codegenerator controller -name DataproductController -async -api -m Dataproduct -dc DatameshContext -outDir Controllers
 ```
