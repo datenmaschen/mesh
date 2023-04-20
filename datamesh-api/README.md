@@ -26,6 +26,9 @@ In a new deployed container, you need to update the database.
 - https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-7.0
 - https://learn.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-7.0&tabs=visual-studio-code
 
+How to track changes from the data:
+- https://learn.microsoft.com/en-us/ef/core/change-tracking/
+
 ## Reference from Medium
 
 - https://medium.com/@woeterman_94/how-to-generate-a-swagger-json-file-on-build-in-net-core-fa74eec3df1
