@@ -13,6 +13,7 @@ namespace Datamesh.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DataDomain>().ToTable("DataDomainSet");
+            modelBuilder.Entity<Dataproduct>().ToTable("DataproductSet");
         }
     }
 

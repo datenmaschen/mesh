@@ -13,8 +13,9 @@ public class Program
 
         builder.Services.AddDbContext<DatameshContext>((provider, options) =>
         {
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DatameshConnString"));
-            //options.AddInterceptors(provider.GetRequiredService<AadAuthenticationDbConnectionInterceptor>());
+            options
+                .EnableSensitiveDataLogging()
+                .UseSqlServer(builder.Configuration.GetConnectionString("DatameshConnString"));
         });
         
         // Add services to the container.
@@ -29,7 +30,7 @@ public class Program
             {
                 Version = "v1",
                 Title = "Datamesh API",
-                Description = "A simple ASP.NET Core Web API",
+                Description = "ASP.NET Core Web API for Datamesh",
                 TermsOfService = new Uri("https://example.com/terms"),
                 Contact = new OpenApiContact
                 {
