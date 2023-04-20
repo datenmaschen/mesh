@@ -1,0 +1,28 @@
+@model DataDomainModel
+
+<div class="container">
+    <div class="jumbotron bg-white rounded-5 py-4 px-1 my-5">
+        <h1>Datadomain</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row px-3 py-4 rounded-5 bg-white">
+        <table class="table table-striped table-hover table-sm">
+            <tdead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Key</th>
+                </tr>
+            </tdead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Id</td>
+                        <td>@Model.Name</td>
+                        <td>@Model.Key</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>

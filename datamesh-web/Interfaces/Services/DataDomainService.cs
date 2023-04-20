@@ -20,5 +20,12 @@ namespace datamesh_web.Interfaces.Services
 
             return await response.ReadContentAsync<List<DataDomainModel>>();
         }
+
+        public async Task<DataDomainModel> FindById(Guid id)
+        {
+            var response = await _client.GetAsync($"{BasePath}/{id}");
+
+            return await response.ReadContentAsync<DataDomainModel>();
+        }
     }
 }

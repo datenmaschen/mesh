@@ -13,6 +13,8 @@
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
+                    <th>Key</th>
+                    <th>Actions</th>
                 </tr>
             </tdead>
                 <tbody>
@@ -21,6 +23,11 @@
                         <tr>
                             <td>@item.Id</td>
                             <td>@item.Name</td>
+                            <td>@item.Key</td>
+                            <td>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="DataDomain" asp-action="DataDomainIndex"></a>
+                                <a asp-area="" asp-controller="DataDomain" asp-action="DataDomainView" asp-route-id="@item.Id">View</a>
+                            </td>  
                         </tr>
                     }
                 </tbody>

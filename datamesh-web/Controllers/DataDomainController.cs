@@ -14,8 +14,19 @@ namespace datamesh_web.Controllers
 
         public async Task<IActionResult> DataDomainIndex()
         {
-            var products = await _service.Find();
-            return View(products);
+            var datadomains = await _service.Find();
+            return View(datadomains);
+        }
+
+        public async Task<IActionResult> DataDomainView(Guid id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var datadomain = await _service.FindById(id);
+            return View(datadomain);
         }
     }
 }
