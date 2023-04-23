@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Datamesh API",
-    "description": "A simple ASP.NET Core Web API",
+    "description": "ASP.NET Core Web API for Datamesh",
     "termsOfService": "https://example.com/terms",
     "contact": {
       "name": "Philipp Frenzel",

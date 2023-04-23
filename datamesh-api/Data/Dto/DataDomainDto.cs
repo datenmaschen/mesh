@@ -1,9 +1,9 @@
 using System;
 using Datamesh.Models;
 
-namespace Datamesh.Data.DTO
+namespace Datamesh.Data.Dto
 {
-    public class DataDomainDTO : DataDomain
+    public class DataDomainDto
 
     {
         public Guid Id { get; set; }
