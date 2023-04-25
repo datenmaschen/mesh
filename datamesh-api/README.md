@@ -58,3 +58,7 @@ dotnet ef database update
 ```bash
 dotnet-aspnet-codegenerator controller -name DataproductController -async -api -m Dataproduct -dc DatameshContext -outDir Controllers
 ```
+
+## Using Automapper for DAL to DTO
+
+- https://github.com/AutoMapper/AutoMapper
