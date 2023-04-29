@@ -6,5 +6,6 @@ namespace datamesh_web.Interfaces
     {
         Task<IEnumerable<DataDomainModel>> Find();
         Task<DataDomainModel> FindById(Guid id);
+        Task Add(DataDomainModel datadomain);
     }
 }

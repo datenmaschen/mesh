@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using datamesh_web.Interfaces;
+using datamesh_web.Models;
 
 namespace datamesh_web.Controllers
 {
@@ -26,6 +27,29 @@ namespace datamesh_web.Controllers
             }
 
             var datadomain = await _service.FindById(id);
+            return View(datadomain);
+        }
+
+        // I want to create a new DataDomain
+        public async Task<IActionResult> DataDomainCreate(
+            [Bind("Name,Description") ]DataDomainModel datadomain)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _service.Add(datadomain);
+                    await _service.add();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (DbUpdateException /* ex */)
+            {
+                //Log the error (uncomment ex variable name and write a log.
+                ModelState.AddModelError("", "Unable to save changes. " +
+                    "Try again, and if the problem persists " +
+                    "see your system administrator.");
+            }
             return View(datadomain);
         }
     }

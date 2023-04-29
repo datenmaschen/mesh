@@ -1,8 +1,11 @@
 @model DataDomainModel
 
+@using (Html.BeginForm("DataDomainCreate", "DataDomain", FormMethod.Post))
+{
+
 <div class="container">
     <div class="row px-3 my-4 py-2 rounded-15">
-        <h3>Datadomain - @Model.Name</h3>
+        <h3>Create a new Datadomain</h3>
     </div>
 </div>
 
@@ -17,18 +20,26 @@
             </thead>
                 <tbody>
                     <tr>
-                        <td>Id</td>
-                        <td>@Model.Id</td>
-                    </tr>
-                    <tr>
                         <td>Name</td>
-                        <td>@Html.DisplayFor(model => model.Name)</td>
+                        <td>
+                            @Html.TextBoxFor(model => model.Name)
+                        </td>
                     </tr>
                     <tr>
                         <td>Key</td>
-                        <td>@Model.Key</td>
+                        <td>
+                            @Html.TextBoxFor(model => model.Key)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Submit"/>
+                        </td>
                     </tr>
                 </tbody>
         </table>
     </div>
 </div>
+
+}
