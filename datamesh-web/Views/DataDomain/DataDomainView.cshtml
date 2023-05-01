@@ -22,11 +22,31 @@
                     </tr>
                     <tr>
                         <td>Name</td>
-                        <td>@Model.Name</td>
+                        <td>@Html.DisplayFor(model => model.Name)</td>
                     </tr>
                     <tr>
                         <td>Key</td>
                         <td>@Model.Key</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="NameAbbrevationLong" class="form-label"></label></td>
+                        <td>@Html.DisplayFor(model => model.NameAbbrevationLong)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="NameAbbreviationShort" class="form-label"></label></td>
+                        <td>@Html.DisplayFor(model => model.NameAbbreviationShort)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="SubscriptionName" class="form-label"></label></td>
+                        <td>@Html.DisplayFor(model => model.SubscriptionName)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="SubscriptionId" class="form-label"></label></td>
+                        <td>@Html.DisplayFor(model => model.SubscriptionId)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="DevOpsProjectName" class="form-label"></label></td>
+                        <td>@Html.DisplayFor(model => model.DevOpsProjectName)</td>
                     </tr>
                 </tbody>
         </table>

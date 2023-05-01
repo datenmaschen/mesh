@@ -81,6 +81,23 @@ namespace datamesh.Controllers
             return NoContent();
         }
 
+        // <snippet_Create>
+        /// <summary>
+        /// Creates a Dataproduct.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST api/Dataproduct
+        ///     {
+        ///        "Name": "Item1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="dataproduct"></param>
+        /// <returns>A newly created Dataproduct</returns>
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response>  
         // POST: api/Dataproduct
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]

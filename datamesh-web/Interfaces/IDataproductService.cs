@@ -6,5 +6,6 @@ namespace datamesh_web.Interfaces
     {
         Task<IEnumerable<DataproductModel>> Find();
         Task<DataproductModel> FindById(Guid id);
+        Task Add(DataproductModel dataproduct);
     }
 }

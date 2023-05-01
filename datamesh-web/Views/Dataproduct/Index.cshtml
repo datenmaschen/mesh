@@ -1,15 +1,15 @@
-@model IEnumerable<datamesh_web.Models.DataDomainModel>
+@model IEnumerable<datamesh_web.Models.DataproductModel>
 
 <div class="container">
     <div class="row px-3 my-4 py-2 rounded-15">
-        <h3>Datadomain(s)</h3>
+        <h3>Dataproduct(s)</h3>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
         <p>
-            <a class="btn btn-outline-success" asp-action="DataDomainCreate">Create New</a>
+            <a class="btn btn-outline-success" asp-action="DataproductCreate">Create New</a>
         </p>
     </div>
     <div class="row px-3 py-4 rounded-5 bg-white">
@@ -19,7 +19,6 @@
                     <th>Id</th>
                     <th>Name</th>
                     <th>Key</th>
-                    <th>Subscription Id</th>
                     <th>Actions</th>
                 </tr>
             </tdead>
@@ -30,9 +29,8 @@
                             <td>@item.Id</td>
                             <td>@item.Name</td>
                             <td>@item.Key</td>
-                            <td>@item.SubscriptionId</td>
                             <td>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="DataDomain" asp-action="DataDomainView" asp-route-id="@item.Id">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Dataproduct" asp-action="DataproductView" asp-route-id="@item.Id">
                                     <i class="fa fa-eye"></i>
                                     View
                                 </a>
