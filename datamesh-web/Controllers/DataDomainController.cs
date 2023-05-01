@@ -38,12 +38,11 @@ namespace datamesh_web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _service.Add(datadomain);
-                    await _service.add();
+                    await _service.Add(datadomain);
                     return RedirectToAction(nameof(Index));
                 }
             }
-            catch (DbUpdateException /* ex */)
+            catch (Exception)
             {
                 //Log the error (uncomment ex variable name and write a log.
                 ModelState.AddModelError("", "Unable to save changes. " +

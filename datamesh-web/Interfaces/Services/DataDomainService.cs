@@ -30,7 +30,7 @@ namespace datamesh_web.Interfaces.Services
             return await response.ReadContentAsync<DataDomainModel>();
         }
 
-        public async Task add(DataDomainModel datadomain)
+        public async Task Add(DataDomainModel datadomain)
         {
             string json = JsonConvert.SerializeObject(datadomain, Formatting.Indented);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
