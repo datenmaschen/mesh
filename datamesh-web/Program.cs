@@ -17,7 +17,10 @@ public class Program
         });
 
         builder.Services.AddHttpClient<IDataDomainService, DataDomainService>(
-            c => c.BaseAddress = new Uri("http://127.0.0.1:5000/")
+            dds => dds.BaseAddress = new Uri("http://127.0.0.1:5000/")
+        );
+        builder.Services.AddHttpClient<IDataproductService, DataproductService>(
+            dps => dps.BaseAddress = new Uri("http://127.0.0.1:5000/")
         );
 
         var app = builder.Build();
