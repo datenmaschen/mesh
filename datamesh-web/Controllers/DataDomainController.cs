@@ -7,10 +7,12 @@ namespace datamesh_web.Controllers
     public class DataDomainController : Controller
     {
         private readonly IDataDomainService _service;
+        private readonly ILogger<DataDomainController> _logger;
 
-        public DataDomainController(IDataDomainService service)
+        public DataDomainController(IDataDomainService service, ILogger<DataDomainController> logger)
         {
             _service = service ?? throw new ArgumentNullException(nameof(service));
+            _logger = logger;
         }
 
         public async Task<IActionResult> DataDomainIndex()
@@ -30,24 +32,23 @@ namespace datamesh_web.Controllers
             return View(datadomain);
         }
 
-        // I want to create a new DataDomain
-        public async Task<IActionResult> DataDomainCreate(
-            [Bind("Name,Description") ]DataDomainModel datadomain)
+        // GET: DataDomain/DataDomainCreate
+        [HttpGet]
+        public IActionResult DataDomainCreate()
         {
-            try
+            return View();
+        }
+
+        // I want to create a new DataDomain
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DataDomainCreate(
+            [Bind("Key,Name,NameAbbrevationLong,NameAbbreviationShort,SubscriptionName,SubscriptionId,DevOpsProjectName")] DataDomainModel datadomain)
+        {
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    await _service.Add(datadomain);
-                    return RedirectToAction(nameof(Index));
-                }
-            }
-            catch (Exception)
-            {
-                //Log the error (uncomment ex variable name and write a log.
-                ModelState.AddModelError("", "Unable to save changes. " +
-                    "Try again, and if the problem persists " +
-                    "see your system administrator.");
+                await _service.Add(datadomain);
+                return RedirectToAction(nameof(DataDomainIndex));
             }
             return View(datadomain);
         }

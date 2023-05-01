@@ -1,6 +1,7 @@
 using datamesh_web.Interfaces;
 using datamesh_web.Interfaces.Services;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 
 public class Program
 {
@@ -10,6 +11,11 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        builder.Services.AddControllers(options =>
+        {
+            options.ModelMetadataDetailsProviders.Add(new SystemTextJsonValidationMetadataProvider());
+        });
+
         builder.Services.AddHttpClient<IDataDomainService, DataDomainService>(
             c => c.BaseAddress = new Uri("http://127.0.0.1:5000/")
         );

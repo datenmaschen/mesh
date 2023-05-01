@@ -11,35 +11,53 @@
 
 <div class="container">
     <div class="row px-3 py-4 rounded-5 bg-white">
-        <table class="table table-hover table-sm">
-            <thead>
-                <tr>
-                    <th>Attribute</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
-                <tbody>
-                    <tr>
-                        <td>Name</td>
-                        <td>
-                            @Html.TextBoxFor(model => model.Name)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Key</td>
-                        <td>
-                            @Html.TextBoxFor(model => model.Key)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <input type="submit" value="Submit"/>
-                        </td>
-                    </tr>
-                </tbody>
-        </table>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </div>
+    
+    <div class="row px-3 py-4 rounded-5 bg-white">
+        <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+                <label asp-for="Key" class="form-label"></label>
+                <input asp-for="Key" class="form-control" />
+                <span asp-validation-for="Key" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+                <label asp-for="NameAbbrevationLong" class="form-label"></label>
+                <input asp-for="NameAbbrevationLong" class="form-control" />
+                <span asp-validation-for="NameAbbrevationLong" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+                <label asp-for="NameAbbreviationShort" class="form-label"></label>
+                <input asp-for="NameAbbreviationShort" class="form-control" />
+                <span asp-validation-for="NameAbbreviationShort" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+                <label asp-for="SubscriptionName" class="form-label"></label>
+                <input asp-for="SubscriptionName" class="form-control" />
+                <span asp-validation-for="SubscriptionName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+                <label asp-for="SubscriptionId" class="form-label"></label>
+                <input asp-for="SubscriptionId" class="form-control" />
+                <span asp-validation-for="SubscriptionId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+                <label asp-for="DevOpsProjectName" class="form-label"></label>
+                <input asp-for="DevOpsProjectName" class="form-control" />
+                <span asp-validation-for="DevOpsProjectName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+                <input type="submit" value="Submit"/>
+        </div>
     </div>
 </div>
 
+}
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 }

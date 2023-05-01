@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row">
         <p>
-            <a asp-action="DataDomainCreate">Create New</a>
+            <a class="btn btn-outline-success" asp-action="DataDomainCreate">Create New</a>
         </p>
     </div>
     <div class="row px-3 py-4 rounded-5 bg-white">
@@ -19,6 +19,7 @@
                     <th>Id</th>
                     <th>Name</th>
                     <th>Key</th>
+                    <th>Subscription Id</th>
                     <th>Actions</th>
                 </tr>
             </tdead>
@@ -29,6 +30,7 @@
                             <td>@item.Id</td>
                             <td>@item.Name</td>
                             <td>@item.Key</td>
+                            <td>@item.SubscriptionId</td>
                             <td>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="DataDomain" asp-action="DataDomainView" asp-route-id="@item.Id">
                                     <i class="fa fa-eye"></i>
