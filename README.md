@@ -18,3 +18,5 @@ This is a real world implementation which consists of 3 streams:
 - Data Platform Confinience
 
 The Services are implemented using Azure App Services (https://learn.microsoft.com/en-us/azure/app-service/overview) the automatisation is done using Azure DevOps (https://azure.microsoft.com/en-us/products/devops/) and the Confinience Layer is using asp.net MVC (https://dotnet.microsoft.com/en-us/apps/aspnet/mvc).
+
+The backend for the platform services is build upon Entity Framework Core (https://learn.microsoft.com/de-de/ef/core/) using a Azure SQL DB as persistance.
