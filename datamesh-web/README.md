@@ -2,6 +2,9 @@
 
 - https://learn.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-7.0&tabs=visual-studio-code
 - https://learn.microsoft.com/en-us/dotnet/architecture/microservices/multi-container-microservice-net-applications/data-driven-crud-microservice
+- https://learn.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-7.0
+- https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-7.0
+- https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=netcore-cli#scaffold-identity-into-a-razor-project-with-authorization
 
 # References 
 
