@@ -211,10 +211,10 @@
         }
       }
     },
-    "/api/Dataproduct": {
+    "/api/DataproductItems": {
       "get": {
         "tags": [
-          "Dataproduct"
+          "DataproductItems"
         ],
         "responses": {
           "200": {
@@ -250,10 +250,10 @@
       },
       "post": {
         "tags": [
-          "Dataproduct"
+          "DataproductItems"
         ],
         "summary": "Creates a Dataproduct.",
-        "description": "Sample request:\r\n            \r\n    POST api/Dataproduct\r\n    {\r\n       \"Name\": \"Item1\",\r\n    }",
+        "description": "Sample request:\r\n            \r\n    POST api/Dataproduct\r\n    {\r\n       \"Name\": \"Item1\",\r\n       \"Key\": \"Key\",\r\n    }",
         "requestBody": {
           "description": "",
           "content": {
@@ -304,10 +304,10 @@
         }
       }
     },
-    "/api/Dataproduct/{id}": {
+    "/api/DataproductItems/{id}": {
       "get": {
         "tags": [
-          "Dataproduct"
+          "DataproductItems"
         ],
         "parameters": [
           {
@@ -346,7 +346,7 @@
       },
       "put": {
         "tags": [
-          "Dataproduct"
+          "DataproductItems"
         ],
         "parameters": [
           {
@@ -387,7 +387,7 @@
       },
       "delete": {
         "tags": [
-          "Dataproduct"
+          "DataproductItems"
         ],
         "parameters": [
           {
@@ -594,32 +594,29 @@
       },
       "DataproductServiceLevelObjectiveStability": {
         "enum": [
-          0,
-          1
+          "stable",
+          "explorative"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "DataproductStatus": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5
+          "New",
+          "Requested",
+          "AdGroupProvisioning",
+          "Deploying",
+          "Active",
+          "Depreciated"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "DataproductType": {
         "enum": [
-          0,
-          1,
-          2
+          "StandardDataproductSpark",
+          "DataproductLogical",
+          "IndividualDataproduct"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "WeatherForecast": {
         "type": "object",

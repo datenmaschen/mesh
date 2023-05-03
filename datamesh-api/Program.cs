@@ -1,9 +1,11 @@
+namespace Datamesh;
+
 using Datamesh.Models;
 using Datamesh.Data;
 using System.Reflection;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-
+using System.Text.Json.Serialization;
 
 public class Program
 {
@@ -19,7 +21,11 @@ public class Program
         });
         
         // Add services to the container.
-        builder.Services.AddControllers();
+        builder.Services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            });
         //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

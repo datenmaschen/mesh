@@ -12,11 +12,11 @@ namespace datamesh.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DataproductController : ControllerBase
+    public class DataproductItemsController : ControllerBase
     {
         private readonly DatameshContext _context;
 
-        public DataproductController(DatameshContext context)
+        public DataproductItemsController(DatameshContext context)
         {
             _context = context;
         }
@@ -91,6 +91,7 @@ namespace datamesh.Controllers
         ///     POST api/Dataproduct
         ///     {
         ///        "Name": "Item1",
+        ///        "Key": "Key",
         ///     }
         ///
         /// </remarks>

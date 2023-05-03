@@ -9,7 +9,7 @@ namespace datamesh_web.Interfaces.Services
     public class DataproductService : IDataproductService
     {
         private readonly HttpClient _client;
-        public const string BasePath = "/api/Dataproduct";
+        public const string BasePath = "/api/DataproductItems";
 
         public DataproductService(HttpClient client)
         {
