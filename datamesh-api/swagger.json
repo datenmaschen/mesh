@@ -56,23 +56,23 @@
           "DataDomainItems"
         ],
         "summary": "Creates a DataDomain.",
-        "description": "Sample request:\r\n            \r\n    POST api/DataDomainItems\r\n    {\r\n       \"Name\": \"Item1\",\r\n    }",
+        "description": "Sample request:\r\n            \r\n    POST api/DataDomainItems\r\n    {\r\n       \"Name\": \"Item1\",\r\n       \"Key\": \"Item1\",\r\n       \"NameAbbreviationShort\": \"Item1\",\r\n       \"NameAbbreviationLong\": \"Item1\",\r\n       \"SubscriptionName\": \"Item1\",\r\n       \"SubscriptionId\": \"Item1\"\r\n    }",
         "requestBody": {
           "description": "",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DataDomain"
+                "$ref": "#/components/schemas/DataDomainDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DataDomain"
+                "$ref": "#/components/schemas/DataDomainDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DataDomain"
+                "$ref": "#/components/schemas/DataDomainDto"
               }
             }
           }
@@ -83,17 +83,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/DataDomain"
+                  "$ref": "#/components/schemas/DataDomainDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DataDomain"
+                  "$ref": "#/components/schemas/DataDomainDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DataDomain"
+                  "$ref": "#/components/schemas/DataDomainDto"
                 }
               }
             }
@@ -454,7 +454,7 @@
           "devOpsProjectName",
           "key",
           "name",
-          "nameAbbrevationLong",
+          "nameAbbreviationLong",
           "nameAbbreviationShort",
           "subscriptionId",
           "subscriptionName"
@@ -474,7 +474,7 @@
             "minLength": 1,
             "type": "string"
           },
-          "nameAbbrevationLong": {
+          "nameAbbreviationLong": {
             "minLength": 1,
             "type": "string"
           },
@@ -523,7 +523,7 @@
             "type": "string",
             "nullable": true
           },
-          "nameAbbrevationLong": {
+          "nameAbbreviationLong": {
             "type": "string",
             "nullable": true
           },

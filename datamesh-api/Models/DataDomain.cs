@@ -15,7 +15,7 @@ namespace Datamesh.Models
         [Required]
         public string? Name { get; set; }
         [Required]
-        public string NameAbbrevationLong { get; set; }
+        public string NameAbbreviationLong { get; set; }
         [Required]
         public string NameAbbreviationShort { get; set; }
         [Required]

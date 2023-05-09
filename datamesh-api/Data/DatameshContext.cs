@@ -10,11 +10,16 @@ namespace Datamesh.Data
 
         public DbSet<DataDomain> DataDomainSet { get; set; } = null!;
         public DbSet<Dataproduct> DataproductSet { get; set; } = null!;
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DataDomain>().ToTable("DataDomainSet");
-            modelBuilder.Entity<Dataproduct>().ToTable("DataproductSet");
+            modelBuilder.Entity<DataDomain>()
+                .HasMany(dp => dp.Dataproducts)
+                .WithOne(dd => dd.DataDomain);
         }
+        modelBuilder.Entity<Dataproduct>().ToTable("DataproductSet");
+            
     }
 
 }

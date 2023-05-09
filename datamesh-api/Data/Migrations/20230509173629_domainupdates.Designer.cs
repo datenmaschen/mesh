@@ -4,6 +4,7 @@ using Datamesh.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace datamesh.Data.Migrations
 {
     [DbContext(typeof(DatameshContext))]
-    partial class DatameshContextModelSnapshot : ModelSnapshot
+    [Migration("20230509173629_domainupdates")]
+    partial class domainupdates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace datamesh.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NameAbbreviationLong")
+                    b.Property<string>("NameAbbrevationLong")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

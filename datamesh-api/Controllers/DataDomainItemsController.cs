@@ -35,13 +35,15 @@ namespace Datamesh.Controllers
         
         // GET: api/DataDomainItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<DataDomain>> GetDataDomain(Guid id)
+        public async Task<ActionResult<DataDomainDto>> GetDataDomain(Guid id)
         {
           if (_context.DataDomainSet == null)
           {
               return NotFound();
           }
-            var dataDomain = await _context.DataDomainSet.FindAsync(id);
+            var dataDomain = await _context.DataDomainSet
+                .Select(x => ItemToDTO(x))
+                .FindAsync(id);
 
             if (dataDomain == null)
             {
@@ -92,22 +94,41 @@ namespace Datamesh.Controllers
         ///     POST api/DataDomainItems
         ///     {
         ///        "Name": "Item1",
+        ///        "Key": "Item1",
+        ///        "NameAbbreviationShort": "Item1",
+        ///        "NameAbbreviationLong": "Item1",
+        ///        "SubscriptionName": "Item1",
+        ///        "SubscriptionId": "Item1",
+        ///        "DevOpsProjectName": "Item1"
         ///     }
         ///
         /// </remarks>
-        /// <param name="dataDomain"></param>
+        /// <param name="dataDomainDto"></param>
         /// <returns>A newly created DataDomain</returns>
         /// <response code="201">Returns the newly created item</response>
         /// <response code="400">If the item is null</response>  
         // POST: api/DataDomainItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<DataDomain>> PostDataDomain(DataDomain dataDomain)
+        public async Task<ActionResult<DataDomainDto>> PostDataDomain(DataDomainDto dataDomainDto)
         {
-          if (_context.DataDomainSet == null)
-          {
-              return Problem("Entity set 'DatameshContext.DataDomainSet'  is null.");
-          }
+            if (_context.DataDomainSet == null)
+            {
+                return Problem("Entity set 'DatameshContext.DataDomainSet'  is null.");
+            }
+
+            var dataDomain = new DataDomain
+            {
+                Id = Guid.NewGuid(),
+                Name = dataDomainDto.Name,
+                Key = dataDomainDto.Key,
+                NameAbbreviationShort = dataDomainDto.NameAbbreviationShort,
+                NameAbbreviationLong = dataDomainDto.NameAbbreviationLong,
+                SubscriptionName = dataDomainDto.SubscriptionName,
+                SubscriptionId = dataDomainDto.SubscriptionId,
+                DevOpsProjectName = dataDomainDto.DevOpsProjectName
+            };
+
             _context.DataDomainSet.Add(dataDomain);
             await _context.SaveChangesAsync();
 
@@ -147,9 +168,10 @@ namespace Datamesh.Controllers
                 Name = DataDomainDtoItem.Name,
                 Key = DataDomainDtoItem.Key,
                 NameAbbreviationShort = DataDomainDtoItem.NameAbbreviationShort,
-                NameAbbrevationLong = DataDomainDtoItem.NameAbbrevationLong,
+                NameAbbreviationLong = DataDomainDtoItem.NameAbbreviationLong,
                 SubscriptionName = DataDomainDtoItem.SubscriptionName,
-                SubscriptionId = DataDomainDtoItem.SubscriptionId
+                SubscriptionId = DataDomainDtoItem.SubscriptionId,
+                DevOpsProjectName = DataDomainDtoItem.DevOpsProjectName
             };
     }
 }
