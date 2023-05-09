@@ -27,7 +27,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DataDomain"
+                    "$ref": "#/components/schemas/DataDomainDto"
                   }
                 }
               },
@@ -35,7 +35,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DataDomain"
+                    "$ref": "#/components/schemas/DataDomainDto"
                   }
                 }
               },
@@ -43,7 +43,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DataDomain"
+                    "$ref": "#/components/schemas/DataDomainDto"
                   }
                 }
               }
@@ -493,6 +493,47 @@
           "devOpsProjectName": {
             "minLength": 1,
             "type": "string"
+          },
+          "dataproducts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Dataproduct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataDomainDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameAbbreviationShort": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameAbbrevationLong": {
+            "type": "string",
+            "nullable": true
+          },
+          "subscriptionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "subscriptionId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false

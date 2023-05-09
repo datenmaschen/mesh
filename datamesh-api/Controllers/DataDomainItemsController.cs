@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using Datamesh.Data;
+using Datamesh.Data.Dto;
 using Datamesh.Models;
 
 namespace Datamesh.Controllers
@@ -19,13 +20,16 @@ namespace Datamesh.Controllers
 
         // GET: api/DataDomainItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<DataDomain>>> GetDataDomainSet()
+        public async Task<ActionResult<IEnumerable<DataDomainDto>>> GetDataDomainSet()
         {
-          if (_context.DataDomainSet == null)
-          {
-              return NotFound();
-          }
-            return await _context.DataDomainSet.ToListAsync();
+            if (_context.DataDomainSet == null)
+            {
+                return NotFound();
+            }
+            
+            return await _context.DataDomainSet
+                        .Select(x => ItemToDTO(x))
+                        .ToListAsync();
         }
 
         
@@ -135,5 +139,17 @@ namespace Datamesh.Controllers
         {
             return (_context.DataDomainSet?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        private static DataDomainDto ItemToDTO(DataDomain DataDomainDtoItem) =>
+            new DataDomainDto
+            {
+                Id = DataDomainDtoItem.Id,
+                Name = DataDomainDtoItem.Name,
+                Key = DataDomainDtoItem.Key,
+                NameAbbreviationShort = DataDomainDtoItem.NameAbbreviationShort,
+                NameAbbrevationLong = DataDomainDtoItem.NameAbbrevationLong,
+                SubscriptionName = DataDomainDtoItem.SubscriptionName,
+                SubscriptionId = DataDomainDtoItem.SubscriptionId
+            };
     }
 }

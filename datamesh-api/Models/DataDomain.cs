@@ -24,5 +24,6 @@ namespace Datamesh.Models
         public Guid SubscriptionId { get; set; }
         [Required]
         public string DevOpsProjectName { get; set; }
+        public ICollection<Dataproduct> Dataproducts { get; set; }
     }
 }

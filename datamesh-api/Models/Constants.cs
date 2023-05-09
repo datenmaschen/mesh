@@ -4,5 +4,6 @@ namespace Datamesh.Models
     {
         // Restriction due to max length of AD-Group names
         public const int MaxNameLength = 43;
+        public const int MaxKeyLength = 43;
     }
 }

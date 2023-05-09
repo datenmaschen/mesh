@@ -17,7 +17,7 @@ namespace Datamesh.Models
 
         public string Name { get; set; }
         [Required]
-        [MaxLength(Constants.MaxNameLength)]
+        [MaxLength(Constants.MaxKeyLength)]
 
         public string Key { get; set; }
         [Required]
@@ -49,9 +49,10 @@ namespace Datamesh.Models
         public bool IsActive { get; set; }
         [Required]
         public DateTime DateCreatedAt { get; set; }
+        
         [ForeignKey("DataDomain")]
         public Guid DataDomainId { get; set; }
-        public virtual DataDomain DataDomain { get; set; }
+        public DataDomain DataDomain { get; set; }
 
         public void SetAdGroupContributorByConvention()
         {
