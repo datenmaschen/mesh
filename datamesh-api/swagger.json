@@ -56,7 +56,7 @@
           "DataDomainItems"
         ],
         "summary": "Creates a DataDomain.",
-        "description": "Sample request:\r\n            \r\n    POST api/DataDomainItems\r\n    {\r\n       \"Name\": \"Item1\",\r\n       \"Key\": \"Item1\",\r\n       \"NameAbbreviationShort\": \"Item1\",\r\n       \"NameAbbreviationLong\": \"Item1\",\r\n       \"SubscriptionName\": \"Item1\",\r\n       \"SubscriptionId\": \"Item1\"\r\n    }",
+        "description": "Sample request:\r\n            \r\n    POST api/DataDomainItems\r\n    {\r\n       \"Name\": \"Item1\",\r\n       \"Key\": \"Item1\",\r\n       \"NameAbbreviationShort\": \"Item1\",\r\n       \"NameAbbreviationLong\": \"Item1\",\r\n       \"SubscriptionName\": \"Item1\",\r\n       \"SubscriptionId\": \"Item1\",\r\n       \"DevOpsProjectName\": \"Item1\"\r\n    }",
         "requestBody": {
           "description": "",
           "content": {
@@ -130,17 +130,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/DataDomain"
+                  "$ref": "#/components/schemas/DataDomainDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DataDomain"
+                  "$ref": "#/components/schemas/DataDomainDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DataDomain"
+                  "$ref": "#/components/schemas/DataDomainDto"
                 }
               }
             }
@@ -216,6 +216,8 @@
         "tags": [
           "DataproductItems"
         ],
+        "summary": "Fetch all Dataproduct(s).",
+        "description": "Sample request:\r\n            \r\n    GET api/Dataproduct",
         "responses": {
           "200": {
             "description": "Success",
@@ -224,7 +226,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Dataproduct"
+                    "$ref": "#/components/schemas/DataproductDto"
                   }
                 }
               },
@@ -232,7 +234,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Dataproduct"
+                    "$ref": "#/components/schemas/DataproductDto"
                   }
                 }
               },
@@ -240,7 +242,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Dataproduct"
+                    "$ref": "#/components/schemas/DataproductDto"
                   }
                 }
               }
@@ -259,17 +261,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dataproduct"
+                "$ref": "#/components/schemas/DataproductDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dataproduct"
+                "$ref": "#/components/schemas/DataproductDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Dataproduct"
+                "$ref": "#/components/schemas/DataproductDto"
               }
             }
           }
@@ -280,17 +282,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dataproduct"
+                  "$ref": "#/components/schemas/DataproductDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dataproduct"
+                  "$ref": "#/components/schemas/DataproductDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dataproduct"
+                  "$ref": "#/components/schemas/DataproductDto"
                 }
               }
             }
@@ -327,17 +329,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dataproduct"
+                  "$ref": "#/components/schemas/DataproductDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dataproduct"
+                  "$ref": "#/components/schemas/DataproductDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dataproduct"
+                  "$ref": "#/components/schemas/DataproductDto"
                 }
               }
             }
@@ -364,17 +366,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dataproduct"
+                "$ref": "#/components/schemas/DataproductDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dataproduct"
+                "$ref": "#/components/schemas/DataproductDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Dataproduct"
+                "$ref": "#/components/schemas/DataproductDto"
               }
             }
           }
@@ -534,6 +536,10 @@
           "subscriptionId": {
             "type": "string",
             "format": "uuid"
+          },
+          "devOpsProjectName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -629,6 +635,47 @@
           },
           "dataDomain": {
             "$ref": "#/components/schemas/DataDomain"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataproductDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/DataproductType"
+          },
+          "owner": {
+            "type": "string",
+            "nullable": true
+          },
+          "deputyOwner": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "purpose": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataDomainId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false

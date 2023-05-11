@@ -12,7 +12,7 @@ public class DataDomainUnitTest
             Name = "DataMesh",
             SubscriptionName = "datenmaschen-chn-1",
             DevOpsProjectName = "Datenmaschen",
-            NameAbbrevationLong = "dmsh",
+            NameAbbreviationLong = "dmsh",
             NameAbbreviationShort = "dm",
         };
     }

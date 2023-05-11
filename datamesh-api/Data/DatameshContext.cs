@@ -17,9 +17,8 @@ namespace Datamesh.Data
             modelBuilder.Entity<DataDomain>()
                 .HasMany(dp => dp.Dataproducts)
                 .WithOne(dd => dd.DataDomain);
-        }
-        modelBuilder.Entity<Dataproduct>().ToTable("DataproductSet");
-            
+            modelBuilder.Entity<Dataproduct>().ToTable("DataproductSet");
+        }   
     }
 
 }

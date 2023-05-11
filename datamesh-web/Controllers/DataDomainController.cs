@@ -43,7 +43,7 @@ namespace datamesh_web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DataDomainCreate(
-            [Bind("Key,Name,NameAbbrevationLong,NameAbbreviationShort,SubscriptionName,SubscriptionId,DevOpsProjectName")] DataDomainModel datadomain)
+            [Bind("Key,Name,NameAbbreviationLong,NameAbbreviationShort,SubscriptionName,SubscriptionId,DevOpsProjectName")] DataDomainModel datadomain)
         {
             if (ModelState.IsValid)
             {

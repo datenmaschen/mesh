@@ -37,20 +37,25 @@ namespace Datamesh.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<DataDomainDto>> GetDataDomain(Guid id)
         {
-          if (_context.DataDomainSet == null)
-          {
-              return NotFound();
-          }
-            var dataDomain = await _context.DataDomainSet
-                .Select(x => ItemToDTO(x))
-                .FindAsync(id);
+            var dataDomain = await _context.DataDomainSet.Select(t => 
+                new DataDomainDto(){
+                    Id = t.Id,
+                    Name = t.Name,
+                    Key = t.Key,
+                    NameAbbreviationShort = t.NameAbbreviationShort,
+                    NameAbbreviationLong = t.NameAbbreviationLong,
+                    SubscriptionName = t.SubscriptionName,
+                    SubscriptionId = t.SubscriptionId,
+                    DevOpsProjectName = t.DevOpsProjectName
+                })
+                .SingleOrDefaultAsync(t => t.Id == id);;
 
             if (dataDomain == null)
             {
                 return NotFound();
             }
 
-            return dataDomain;
+            return Ok(dataDomain);
         }
 
         // PUT: api/DataDomainItems/5

@@ -13,12 +13,12 @@ namespace datamesh_web.Models
         [StringLength(20, ErrorMessage = "Key length can't be more than 20.")]
         [Display(Name = "Data Domain Key")]
         public string Key { get; set; }
-        [Required(ErrorMessage = "Name Abbrevation Long is Required.")]
-        [Display(Name = "Abbrevation Long Name")]
-        public string NameAbbrevationLong { get; set; }
+        [Required(ErrorMessage = "Name Abbreviation Long is Required.")]
+        [Display(Name = "Abbreviation Long")]
+        public string NameAbbreviationLong { get; set; }
         [Required(ErrorMessage = "Name Abbreviation Short is Required.")]
         [StringLength(4, ErrorMessage = "Abbreviation Short length can't be more than 4.")]
-        [Display(Name = "Abbrevation Short Name")]
+        [Display(Name = "Abbrevation Short")]
         public string NameAbbreviationShort { get; set; }
         [Required(ErrorMessage = "SubscriptionName is Required.")]
         [Display(Name = "Subscription Name")]
