@@ -1,0 +1,7 @@
+/workspaces/mesh/obj/Debug/net7.0/datamesh.csproj.AssemblyReference.cache
+/workspaces/mesh/obj/Debug/net7.0/datamesh.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/mesh/obj/Debug/net7.0/datamesh.AssemblyInfoInputs.cache
+/workspaces/mesh/obj/Debug/net7.0/datamesh.AssemblyInfo.cs
+/workspaces/mesh/obj/Debug/net7.0/datamesh.csproj.CoreCompileInputs.cache
+/workspaces/mesh/obj/Debug/net7.0/datamesh.MvcApplicationPartsAssemblyInfo.cs
+/workspaces/mesh/obj/Debug/net7.0/datamesh.MvcApplicationPartsAssemblyInfo.cache
